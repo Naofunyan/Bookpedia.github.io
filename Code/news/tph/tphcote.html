@@ -1,0 +1,828 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tin Phát Hành Chào Mừng Đến Lớp Học Đề Cao Thực Lực 04  - Bookpedia</title>
+<meta name="viewport" content="width=device-width, initial-scale:1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://previews.123rf.com/images/sergeypykhonin/sergeypykhonin1809/sergeypykhonin180900041/108230283-registration-register-logo-or-label-diary-note-icon-vector-illustration.jpg" type = "image/x-icon">
+</head>
+	
+<style>
+	@charset "utf-8";
+/* CSS Document */
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+.headlinetext {
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-left: 45px;
+	font-size: 55px;
+	font-weight: 900;
+	font-family: "Work Sans", sans-serif;
+}
+
+.h2 {
+	padding: 20px;
+	font-size: 25px;
+	font-weight: 900;
+	font-family: "Work Sans", sans-serif;
+}
+
+.h3 {
+	padding: 20px;
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 1.8;
+	font-family: "Work Sans", sans-serif;
+}
+
+/* Hoverunderline */
+.hover-underline-animation {
+	display: inline-block;
+  	position: relative;
+  	color: black;
+}
+
+.hover-underline-animation:after {
+	content: '';
+  	position: absolute;
+  	width: 100%;
+  	transform: scaleX(0);
+  	height: 3.5px;
+  	bottom: 0;
+  	left: 0;
+  	background-color: black;
+  	transform-origin: bottom right;
+  	transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+	transform: scaleX(1);
+  	transform-origin: bottom left;
+}
+
+/*button*/
+.button {
+  border-radius: 4px;
+  background-color: white;
+  border: 3px solid black;
+  color: black;
+	font-family: "Work Sans", sans-serif;
+  text-align: center;
+  font-size: 28px;
+	font-weight: 700;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*Upper Area*/
+backgroundbox .bbox {
+		padding: 1px;
+		background-color: lightgray;
+		background-image: url("../../../../Labs/UDW/backgroundbox.gif");
+		height: 100%; 
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+
+/* Image Slideshow */
+	body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+
+  background-image: url("../../../../Labs/UDW/backgroundbox.gif");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+lowerbox .lowerbox {
+  		background-color: white;
+  		border: 3px solid black;
+  		padding: 25px;
+  		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		margin-top: 20px;
+}
+	lowerbox .logo {
+		font-size: 25px;
+		font-weight: 600;
+		line-height: 30px;
+		padding-left: 30px;
+		max-width: 200px;
+		font-family: "Work Sans", sans-serif;
+	}	
+
+#menu ul {
+		list-style-type: none;
+		text-align: right;
+		font-size: 20px;
+		font-weight: 900;
+	}
+	
+	#menu ul li {
+		color: black;
+		display: inline-table;
+		text-align: center;
+		width: 220px;
+		height: 40px;
+		line-height: 40px;
+		position: relative;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+	#menu ul li a {
+		color: black;
+		text-decoration: none;
+		display: block;
+	}
+	
+	#menu ul li a:hover {
+		color: #333;
+	}
+	
+	#menu ul li > .sub-menu {
+		background: white;
+		display: none;
+		position: absolute;
+		margin-top: 16px;
+		border: 2px solid black;
+	}
+	
+	#menu ul li:hover .sub-menu {
+		display: block;
+	}
+
+.hitArea {
+    position: absolute;
+    width: 100%;
+    height: 230%;
+    top: -60%;
+    background-color: none;
+}
+
+.search-container {
+  float: right;
+}
+
+.input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 20px;
+font-weight: 900;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    float: none;
+  }
+  .input[type=text], .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+/*Lower Area*/
+/*FeatureBox*/
+.boxh1 {
+		padding: 2px;
+		margin-right: 25px;
+		text-align: left;
+		font-size: 50px;
+		font-weight: 900;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+	.boxh2 {
+		padding: 2px;
+		line-height: 1.4;
+		margin-right: 25px;
+		text-align: left;
+		font-size: 37px;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+    .boxh3 {
+		line-height: 1.8;
+		padding: 2px;
+		margin-right: 20px;
+		margin-bottom: 5px;
+		text-align: left;
+		font-size: 20px;
+		font-family: "Work Sans", sans-serif;
+      }
+	
+img {
+        width: 83%;
+      }
+	
+	.text {
+		display: block;
+		text-size: 100px;
+	}
+
+	.product {
+		display: flex;
+		padding: 10px;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+	
+	.productpicture {
+		flex-basis: 40%;
+		background-color: white;
+	}
+	
+	.productdescription {
+		flex-basis: 60%;
+		background-color: white;
+	}
+
+.container {
+	padding: 20px;
+    margin: auto;
+}
+/* Định dạng phần tab */
+div.tab {
+    float: left;
+    border: 2px solid black;
+    background-color: white;
+    width: 30%;
+    height: 500px;
+}
+ 
+/* định dạng các thẻ a dại diện cho từng tab */
+div.tab a {
+    display: block;
+    background-color: white;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+ 
+/* Đổi màu khi tab được hover */
+div.tab a:hover {
+    background-color: #ddd;
+}
+ 
+/* Đổi màu khi tab được active */
+div.tab a.active {
+    background-color: #ccc;
+}
+ 
+/* Định dạng cho phần nội dung */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 2px solid black;
+    width: 70%;
+    border-left: none;
+    height: 500px;
+}
+	
+	.space {
+		margin-top: 10px;
+	}
+	
+
+/* Book images lists */
+	div.gallery {
+		padding: 0px;
+	}
+	
+	div.gallery:hover {
+  		border: 3px solid black;
+	}
+	
+	div.gallery img {
+		border: 3px solid black;
+  		width: 100%;
+  		height: 100%;
+	}
+	
+	div.desc {
+		color: black;
+  		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+  		text-align: left;
+		font-size: 25px;
+		font-weight: 900;
+		font-family: "Work Sans", sans-serif;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.responsive {
+  		padding: 0px 65px;
+  		float: left;
+  		width: 25%;
+		text-decoration: none;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.responsive {
+			width: 50%;
+    		margin: 6px 0;
+  		}
+	}
+
+	@media only screen and (max-width: 500px) {
+  		.responsive {
+    		width: 100%;
+  		}
+	}
+
+	.clearfix:after {
+  		content: "";
+  		display: table;
+  		clear: both;
+	}
+
+
+/*Bottom Area*/
+bottombox .bottombox {
+		margin-top: 500px;
+		padding: 1px;
+		background-color: black;
+		height: 30%; 
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+	
+	#menubottom ul {
+		list-style-type: none;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 900;
+		margin-top: 20px;
+	}
+	
+	#menubottom ul li {
+		color: white;
+		display: inline-table;
+		width: 250px;
+		height: 40px;
+		line-height: 40px;
+		position: relative;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+	#menubottom ul li a {
+		color: white;
+		text-decoration: none;
+		display: block;
+	}
+	
+	#menubottom ul li a:hover {
+		color: white;
+	}
+	
+	#menubottom ul li > .sub-menubottom {
+		position: absolute;
+	}
+	
+	#menubottom ul li:hover .sub-menubottom {
+		display: block;
+	}
+
+#slider-wrapper {
+  width: 940px;
+  height: 470px;
+  margin: 50px auto;
+  position: relative;
+  margin-bottom: 0px;
+  background: lightgray;
+  overflow: hidden;
+}
+
+#s1 {
+  padding: 6px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: -36px;
+  border-radius: 30px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#s2 {
+  padding: 6px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: -12px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#s3 {
+  padding: 6px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: 12px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#s4 {
+  padding: 6px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: 36px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#s1:hover,
+#s2:hover,
+#s3:hover,
+#s4:hover {
+  opacity: .50;
+}
+
+.inner-wrapper {
+  width: 940px;
+  height: 470px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+
+.control {
+  display: none;
+}
+
+#Slide1:checked ~ .overflow-wrapper {
+  margin-left: 0%;
+}
+
+#Slide2:checked ~ .overflow-wrapper {
+  margin-left: -100%;
+}
+
+#Slide3:checked ~ .overflow-wrapper {
+  margin-left: -200%;
+}
+
+#Slide4:checked ~ .overflow-wrapper {
+  margin-left: -300%;
+}
+
+#Slide1:checked + #s1 {
+  opacity: 1;
+}
+
+#Slide2:checked + #s2 {
+  opacity: 1;
+}
+
+#Slide3:checked + #s3 {
+  opacity: 1;
+}
+
+#Slide4:checked + #s4 {
+  opacity: 1;
+}
+
+.overflow-wrapper {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;	
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide img {
+  width: 25%;
+  float: left;
+}
+	
+	.nbox {
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-left: 45px;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 1.8;
+	font-family: "Work Sans", sans-serif;
+	}
+</style>
+
+<body>
+	<backgroundbox>
+			<lowerbox>
+				<div class="lowerbox">
+					<div style="display: inline-block;">
+						<div><a href="index.html" class="logo" style="text-decoration: none; color: black;">BOOKPEDIA</a></div>
+					</div>
+					<div style="display: inline-block; float: right;">
+					<div id="menu">	
+					<ul>
+					<li>
+						<div class="hover-underline-animation"><a href="#">Manga</a></div>
+						<div class="hitArea"></div>
+						<ul class="sub-menu">
+							<div class="hover-underline-animation">
+								<li><a href="../../DiscoverManga.html" target="_blank">Khám phá</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="../../ReleaseCalendar.html" target="_blank">Lịch phát hành</a></li>
+							</div>
+						</ul>
+					</li>
+					<li>
+						<div class="hover-underline-animation">
+						<a href="#">Novels</a>
+						</div>
+						<div class="hitArea"></div>
+						<ul class="sub-menu">
+							<div class="hover-underline-animation">
+								<li><a href="../../DiscoverLN.html" target="_blank">Khám phá</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="../../ReleaseCalendar.html" target="_blank">Lịch phát hành</a></li>
+							</div>
+						</ul>
+					</li>
+					<div class="hover-underline-animation">
+						<li><a href="../../News.html" target="_blank">Tin tức</a></li>
+					</div>
+						<li>
+						<div class="hover-underline-animation">
+						<a href="#">Tìm kiếm</a>
+						</div>
+						<div class="hitArea"></div>
+						<ul class="sub-menu">
+								<li>
+									<div class="search-container">
+										<form action="/action_page.php">
+											<input type="text" placeholder="Search.." name="search">
+											<button type="submit"><i class="fa fa-search"></i></button>
+										</form>
+									</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</lowerbox>
+	</backgroundbox>
+	
+	<div class="product">
+	<div class="productpicture">
+		<img src="../../../Resources/ln/cote/cote401.png">
+	</div>
+	
+	<div class="productdescription">
+		<div class="text">
+	<div class="boxh1">TIN PHÁT HÀNH - CHÀO MỪNG ĐẾN LỚP HỌC ĐỀ CAO THỰC LỰC 04</div><br>
+	<div class="boxh2">
+		Tác giả: <b>Kinugasa Syougo</b><br>
+			Dịch giả: <b>Thu Hằng</b><br>
+		Giá bìa: <b>120.000 VNĐ (Bản thường / đặc biệt) - 295.000 VNĐ (Bản giới hạn)</b><br>
+		Nhà phát hành: <b>IPM</b><br>
+		Nhà xuất bản: <b>NXB Hà Nội</b><br>
+		Ngày phát hành: <b>12/11/2022</b><br>
+			</div>
+			<div class="boxh3"><br>
+				<p><b>LƯU Ý: Mỗi khách hàng chỉ được mua tối đa 01 cuốn CHÀO MỪNG ĐẾN LỚP HỌC ĐỀ CAO THỰC LỰC Bản Giới Hạn + 01 cuốn Bản Đặc Biệt. Nếu đặt quá số lượng sẽ bị HỦY toàn bộ đơn hàng.</b></p>
+			</div>
+	</div>
+	</div>
+	</div>
+	<br><br>
+	<div class="nbox">
+		<p>🛒 Link đặt sách CHÀO MỪNG ĐẾN LỚP HỌC ĐỀ CAO THỰC LỰC 04:</p>
+		<p>Website:</p>
+		<p>⚡ Bản Giới Hạn: <a href="https://bit.ly/IPM_lop-hoc-de-cao-thuc-luc-4">https://bit.ly/IPM_lop-hoc-de-cao-thuc-luc-4</a></p>
+		<p>⚡ Bản Đặc Biệt: <a href="https://ipm.vn/.../chao-mung-den-lop-hoc-de-cao-thuc-luc-4">https://ipm.vn/.../chao-mung-den-lop-hoc-de-cao-thuc-luc-4</a></p>
+		<p>Shopee: </p>
+		<p>⚡ Bản Đặc Biệt: <a href="https://bit.ly/SP_lop-hoc-de-cao-thuc-luc-4-db">https://bit.ly/SP_lop-hoc-de-cao-thuc-luc-4-db</a></p>
+		<p>⚡ Bản Thường: <a href="https://bit.ly/SP_lop-hoc-de-cao-thuc-luc-4">https://bit.ly/SP_lop-hoc-de-cao-thuc-luc-4</a></p>
+		<p>Lazada: <a href="https://bit.ly/LZD_lop-hoc-de-cao-thuc-luc-4">https://bit.ly/LZD_lop-hoc-de-cao-thuc-luc-4</a></p>
+		<p>Tiki: <a href="https://bit.ly/TK_lop-hoc-de-cao-thuc-luc-4">https://bit.ly/TK_lop-hoc-de-cao-thuc-luc-4</a></p>
+		<p>Fahasa:</p>
+		<p>⚡ Bản Giới Hạn: <a href="https://bit.ly/FHS_lop-hoc-de-cao-thuc-luc-4-gh">https://bit.ly/FHS_lop-hoc-de-cao-thuc-luc-4-gh</a></p>
+		<p>⚡ Bản Đặc Biệt: <a href="https://bit.ly/FHS_lop-hoc-de-cao-thuc-luc-4-db">https://bit.ly/FHS_lop-hoc-de-cao-thuc-luc-4-db</a></p>
+		<p>⚡ Bản Thường: <a href="https://bit.ly/FHS_lop-hoc-de-cao-thuc-luc-4">https://bit.ly/FHS_lop-hoc-de-cao-thuc-luc-4</a></p>
+		
+		<p>--------------------------------</p>
+		<p>💐 CHÀO MỪNG ĐẾN LỚP HỌC ĐỀ CAO THỰC LỰC – 4 💐</p>
+		<p>Tác giả: Kinugasa Syougo </p>
+		<p>Minh họa: Tomoseshunsaku</p>
+		<p>Thể loại: light novel, học đường</p>
+		<p>Khổ: 13 x 18 cm</p>
+		<p>⏰ Phát hành: 12/11/2022 tại Hà Nội (Các tỉnh khác phụ thuộc vào kênh phân phối)</p>
+		<p>🎁 Quà tặng và giá bìa: </p>
+		<p>⚡ Bản Giới Hạn - 295.000đ:  </p>
+		<p>+ Standee acrylic thiết kế độc quyền, gồm hình nhân vật, bảng tên và đế</p>
+		<p>+ ID Card đựng trong phong bì</p>
+		<p>+ Sách và quà tặng đựng trong box có dán tem độc quyền từ NXB Kadokawa</p>
+		<p>⚡ Bản Đặc Biệt - 120.000đ: Camera card</p>
+		<p>⚡ Bản Thường - 120.000đ</p>
+		<p>💐 Nội dung:</p> 
+		<p>Thử thách sinh tồn trên hoang đảo kết thúc êm đẹp, khép lại nửa đầu của kì kiểm tra đặc biệt trong dịp nghỉ hè. Học sinh khối Mười bước vào cuộc chiến theo đội trên “sàn đấu” là du thuyền hạng sang. Đề bài khác hẳn so với thử thách sinh tồn, mở ra một cuộc đấu trí nhằm thử thách năng lực tư duy. Học sinh các lớp từ A đến D được chia thành 12 đội phỏng theo 12 con giáp, với nhiệm vụ tìm ra thành viên đặc biệt duy nhất của đội.</p>
+		<p>Trong khi đa số học sinh bất ngờ vì bài kiểm tra phá vỡ lối suy nghĩ “các lớp đối đầu nhau”, nhân tài của mỗi lớp như Katsuragi và Ryuen đã nhìn ra mục tiêu và bắt đầu hành động. Còn Kiyotaka lại chú ý tới sự bất thường nơi Karuizawa Kei - cô bạn cùng lớp chung đội, để rồi dấn thân vào một cuộc chiến khác nhằm giải phóng cô khỏi “quá khứ không cách nào rũ bỏ”.</p>
+		<p>“Tôi là… kí sinh trùng, sinh vật yếu đuối không thể tự tồn tại.”</p>
+		<p>Bộ sách “Khải Huyền” mới của thể loại học đường đã bước sang tập thứ tư!</p>
+		<p>--------------------------------</p>
+	</div>
+	
+
+	<br><br>
+	<div class="headlinetext">Sách cùng Series:</div>
+	<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="../../../Resources/ln/cote/cote101.png" width="600" height="400">
+    </a>
+    <div class="desc"><a href="#" target="_blank" style="text-decoration:none; color: black;">Chào Mừng Đến Lớp Học Đề Cao Thực Lực 01</a></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="../../../Resources/ln/cote/cote201.png" width="600" height="400">
+    </a>
+    <div class="desc"><a href="#" target="_blank" style="text-decoration:none; color: black;">Chào Mừng Đến Lớp Học Đề Cao Thực Lực 02</a></div>
+  </div>
+</div>
+	
+	<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="../../../Resources/ln/cote/cote301.png" width="600" height="400">
+    </a>
+    <div class="desc"><a href="#" target="_blank" style="text-decoration:none; color: black;">Chào Mừng Đến Lớp Học Đề Cao Thực Lực 03</a></div>
+  </div>
+</div>
+	
+	<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="../../../Code/ln/cote/cote04.html">
+      <img src="../../../Resources/ln/cote/cote401.png" width="600" height="400">
+    </a>
+    <div class="desc"><a href="../../../Code/ln/cote/cote04.html" target="_blank" style="text-decoration:none; color: black;">Chào Mừng Đến Lớp Học Đề Cao Thực Lực 04</a></div>
+  </div>
+</div>
+	
+	<script type="text/javascript">
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id){
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var content = document.getElementById(id);
+        content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function(){
+            var id = this.textContent;
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            this.className += " active";
+            showContent(id);
+        });
+    }
+    showContent('Thông tin chung');
+</script>
+	
+			<bottombox>
+			<div class="bottombox">
+				<div id="menubottom">
+					<ul>
+					<li>
+						<div class="hover-underline-animation"><a href="#">Hỗ trợ</a></div>
+						<ul class="sub-menubottom">
+							<div class="hover-underline-animation">
+								<li><a href="#">Câu hỏi thường gặp</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="#">Điều khoản dịch vụ</a></li>
+							</div>	
+						</ul>
+					</li>
+					<li>
+						<div class="hover-underline-animation">
+						<a href="#">Chính sách</a>
+						</div>
+						<ul class="sub-menubottom">
+							<div class="hover-underline-animation">
+								<li><a href="#">Chính sách bảo mật</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="#"></a></li>
+							</div>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</bottombox>
+		
+</body>
+</html>

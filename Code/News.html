@@ -1,0 +1,579 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tin Tức - Bookpedia</title>
+<meta name="viewport" content="width=device-width, initial-scale:1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://previews.123rf.com/images/sergeypykhonin/sergeypykhonin1809/sergeypykhonin180900041/108230283-registration-register-logo-or-label-diary-note-icon-vector-illustration.jpg" type = "image/x-icon">
+</head>
+
+<style>
+	@charset "utf-8";
+/* CSS Document */
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+.headlinetext {
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-left: 45px;
+	font-size: 55px;
+	font-weight: 900;
+	font-family: "Work Sans", sans-serif;
+}
+
+.subtext {
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-left: 45px;
+	font-size: 40px;
+	font-weight: 900;
+	font-family: "Work Sans", sans-serif;
+}
+
+/* Hoverunderline */
+.hover-underline-animation {
+	display: inline-block;
+  	position: relative;
+  	color: black;
+}
+
+.hover-underline-animation:after {
+	content: '';
+  	position: absolute;
+  	width: 100%;
+  	transform: scaleX(0);
+  	height: 3.5px;
+  	bottom: 0;
+  	left: 0;
+  	background-color: black;
+  	transform-origin: bottom right;
+  	transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+	transform: scaleX(1);
+  	transform-origin: bottom left;
+}
+
+/*button*/
+.button {
+  border-radius: 4px;
+  background-color: white;
+  border: 3px solid black;
+  color: black;
+	font-family: "Work Sans", sans-serif;
+  text-align: center;
+  font-size: 28px;
+	font-weight: 700;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*Upper Area*/
+backgroundbox .bbox {
+		padding: 1px;
+		background-color: lightgray;
+		background-image: url("../Labs/UDW/backgroundbox.gif");
+		height: 100%; 
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+
+/* Image Slideshow */
+	body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+
+  background-image: url("../Labs/UDW/backgroundbox.gif");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+lowerbox .lowerbox {
+  		background-color: white;
+  		border: 3px solid black;
+  		padding: 25px;
+  		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		margin-top: 20px;
+		position: fixed;
+		top: 0;
+		width: 96.8%;
+		z-index: 1;
+}
+	lowerbox .logo {
+		font-size: 25px;
+		font-weight: 600;
+		line-height: 30px;
+		padding-left: 30px;
+		max-width: 200px;
+		font-family: "Work Sans", sans-serif;
+	}	
+
+#menu ul {
+		list-style-type: none;
+		text-align: right;
+		font-size: 20px;
+		font-weight: 900;
+	}
+	
+#menu ul li {
+		color: black;
+		display: inline-table;
+		text-align: center;
+		width: 220px;
+		height: 40px;
+		line-height: 40px;
+		position: relative;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+	#menu ul li a {
+		color: black;
+		text-decoration: none;
+		display: block;
+	}
+	
+	#menu ul li a:hover {
+		color: #333;
+	}
+	
+	#menu ul li > .sub-menu {
+		background: white;
+		display: none;
+		position: absolute;
+		margin-top: 26px;
+		border: 2px solid black;
+	}
+	
+	#menu ul li:hover .sub-menu {
+		display: block;
+	}
+
+.hitArea {
+    position: absolute;
+    width: 100%;
+    height: 230%;
+    top: -60%;
+    background-color: none;
+}
+
+.search-container {
+  float: right;
+}
+
+.input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 20px;
+font-weight: 900;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    float: none;
+  }
+  .input[type=text], .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+.calendarbox {
+  border: 3px solid black;
+  padding: 20px;
+  margin: 40px;
+}
+
+/* Book images lists */
+	div.gallery {
+		padding: 0px;
+	}
+	
+	div.gallery:hover {
+  		border: 3px solid black;
+	}
+	
+	div.gallery img {
+		border: 3px solid black;
+  		width: 100%;
+  		height: 100%;
+	}
+	
+	div.desc {
+		color: black;
+  		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+  		text-align: left;
+		font-size: 25px;
+		font-weight: 900;
+		font-family: "Work Sans", sans-serif;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.responsive {
+  		padding: 0px 65px;
+  		float: left;
+  		width: 25%;
+		text-decoration: none;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.responsive {
+			width: 50%;
+    		margin: 6px 0;
+  		}
+	}
+
+	@media only screen and (max-width: 500px) {
+  		.responsive {
+    		width: 100%;
+  		}
+	}
+
+	.clearfix:after {
+  		content: "";
+  		display: table;
+  		clear: both;
+	}
+
+/*FeatureBox*/
+.boxh1 {
+		padding: 5px;
+		margin-right: 25px;
+		text-align: left;
+		font-size: 50px;
+		font-weight: 900;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+	.boxh2 {
+		padding: 5px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-right: 25px;
+		text-align: left;
+		font-size: 40px;
+		font-weight: 900;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+    .boxh3 {
+		line-height: 1.8;
+		padding: 5px;
+		margin-right: 20px;
+		margin-bottom: 5px;
+		text-align: left;
+		font-size: 25px;
+		font-family: "Work Sans", sans-serif;
+      }
+	
+img {
+        width: 83%;
+      }
+	
+	.text {
+		display: block;
+		text-size: 100px;
+	}
+
+	.product {
+		display: flex;
+		padding: 20px;
+		border: 3px solid black;
+		margin-left: 65px;
+		margin-right: 65px;
+		margin-bottom: 20px;
+	}
+	
+	.productpicture {
+		flex-basis: 40%;
+		background-color: white;
+	}
+	
+	.productdescription {
+		flex-basis: 60%;
+		background-color: white;
+	}
+
+/*Bottom Area*/
+bottombox .bottombox {
+		padding: 1px;
+		background-color: black;
+		height: 30%; 
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+	
+	#menubottom ul {
+		list-style-type: none;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 900;
+		margin-top: 20px;
+	}
+	
+	#menubottom ul li {
+		color: white;
+		display: inline-table;
+		width: 250px;
+		height: 40px;
+		line-height: 40px;
+		position: relative;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+	#menubottom ul li a {
+		color: white;
+		text-decoration: none;
+		display: block;
+	}
+	
+	#menubottom ul li a:hover {
+		color: white;
+	}
+	
+	#menubottom ul li > .sub-menubottom {
+		position: absolute;
+	}
+	
+	#menubottom ul li:hover .sub-menubottom {
+		display: block;
+	}
+
+</style>
+
+<body>
+	<backgroundbox>
+
+			<lowerbox>
+				<div class="lowerbox">
+					<div style="display: inline-block;">
+						<div><a href="../index.html" class="logo" style="text-decoration: none; color: black;">BOOKPEDIA</a></div>
+					</div>
+					<div style="display: inline-block; float: right;">
+					<div id="menu">	
+					<ul>
+					<li>
+						<div class="hover-underline-animation"><a href="#">Manga</a></div>
+						<div class="hitArea"></div>
+						<ul class="sub-menu">
+							<div class="hover-underline-animation">
+								<li><a href="DiscoverManga.html">Khám phá</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="ReleaseCalendar.html">Lịch phát hành</a></li>
+							</div>
+						</ul>
+					</li>
+					<li>
+						<div class="hover-underline-animation">
+						<a href="#">Novels</a>
+						</div>
+						<div class="hitArea"></div>
+						<ul class="sub-menu">
+							<div class="hover-underline-animation">
+								<li><a href="DiscoverLN.html">Khám phá</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="ReleaseCalendar.html">Lịch phát hành</a></li>
+							</div>
+						</ul>
+					</li>
+					<div class="hover-underline-animation">
+						<li><a href="News.html">Tin tức</a></li>
+					</div>
+						<li>
+						<div class="hover-underline-animation">
+						<a href="#">Tìm kiếm</a>
+						</div>
+						<div class="hitArea"></div>
+						<ul class="sub-menu">
+								<li>
+									<div class="search-container">
+										<form action="/action_page.php">
+											<input type="text" placeholder="Search.." name="search">
+											<button type="submit"><i class="fa fa-search"></i></button>
+										</form>
+									</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</lowerbox>
+	</backgroundbox>
+	
+	<br><br><br><br><br><br><br><br><br>
+	<div class="headlinetext">Tin Phát Hành</div>
+	
+	<div class="product">
+	<div class="productpicture">
+		<img src="../Resources/ln/cote/cote401.png">
+	</div>
+	
+	<div class="productdescription">
+		<div class="text">
+	<div class="boxh1">Tin Phát Hành - Chào Mừng Đến Lớp Học Đề Cao Thực Lực 04</div><br>
+	<div class="boxh2">Tác giả: Kinugasa Syougo<br></div>
+			<div class="boxh3"><br>
+				<p><b>LƯU Ý: Mỗi khách hàng chỉ được mua tối đa 01 cuốn CHÀO MỪNG ĐẾN LỚP HỌC ĐỀ CAO THỰC LỰC Bản Giới Hạn + 01 cuốn Bản Đặc Biệt. Nếu đặt quá số lượng sẽ bị HỦY toàn bộ đơn hàng.</b></p><br>
+				<p><a href="news/tph/tphcote.html" target="_blank" class="button"><span>Xem thêm </span></a></p>
+			</div>
+	</div>
+	</div>
+</div>
+	
+	<div class="product">
+	<div class="productpicture">
+		<img src="../Resources/ln/ldhbh/ldtbh201.png">
+	</div>
+	
+	<div class="productdescription">
+		<div class="text">
+	<div class="boxh1">Tin Phát Hành - Hành Trình Trở Thành Nhà Thám Hiểm Của Chàng Lính Đánh Thuê Bần Hàn 02</div><br>
+	<div class="boxh2">Tác giả: Mine<br></div>
+			<div class="boxh3"><br>
+				<p></p><br>
+				<p><a href="news/tph/tphldtbh.html" target="_blank" class="button"><span>Xem thêm </span></a></p>
+			</div>
+	</div>
+	</div>
+</div>
+	
+	<br><br>
+	<a href="News.html" target="_blank" class="button" style="margin-left: 60px;"><span>Xem thêm </span></a>
+	
+	<br><br><br><br><br><br>
+	
+	<div class="headlinetext">Điểm Tin</div>
+	
+	<div class="product">
+	<div class="productpicture">
+		<img src="../Resources/manga/mirai/mirai01.png">
+	</div>
+	
+	<div class="productdescription">
+		<div class="text">
+	<div class="boxh1">Mirai Đến Từ Tương Lai</div><br>
+	<div class="boxh2">Tác giả: Kinugasa Syougo<br></div>
+			<div class="boxh3"><br>
+				<p>Với Mirai đến từ tương lai, tác giả Mamoru Hosoda tiếp tục khai thác đề tài gia đình và tình thân - vốn góp phần xây dựng và định hình nên tên tuổi của ông qua hàng loạt tác phẩm đình đám với vô số giải thưởng và đề cử.</p><br>
+				<p><a href="news/dt/mirai.html" target="_blank" class="button"><span>Xem thêm </span></a></p>
+			</div>
+	</div>
+	</div>
+</div>
+	
+	<br><br><br>
+	<a href="News.html" target="_blank" class="button" style="margin-left: 60px;"><span>Xem thêm </span></a>
+	
+	<br><br><br><br><br><br>
+	
+	<bottombox>
+			<div class="bottombox">
+				<div id="menubottom">
+					<ul>
+					<li>
+						<div class="hover-underline-animation"><a href="#">Hỗ trợ</a></div>
+						<ul class="sub-menubottom">
+							<div class="hover-underline-animation">
+								<li><a href="#">Câu hỏi thường gặp</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="#">Điều khoản dịch vụ</a></li>
+							</div>	
+						</ul>
+					</li>
+					<li>
+						<div class="hover-underline-animation">
+						<a href="#">Chính sách</a>
+						</div>
+						<ul class="sub-menubottom">
+							<div class="hover-underline-animation">
+								<li><a href="#">Chính sách bảo mật</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="#"></a></li>
+							</div>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</bottombox>
+</body>
+</html>

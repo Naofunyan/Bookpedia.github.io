@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mirai Đến Từ Tương Lai  - Bookpedia</title>
+<meta name="viewport" content="width=device-width, initial-scale:1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://previews.123rf.com/images/sergeypykhonin/sergeypykhonin1809/sergeypykhonin180900041/108230283-registration-register-logo-or-label-diary-note-icon-vector-illustration.jpg" type = "image/x-icon">
+</head>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	/* Master Box */
+backgroundbox .bbox {
+		padding: 1px;
+		background-color: lightgray;
+		background-image: url("../../../../Labs/UDW/backgroundbox.gif");
+		height: 100%; 
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+
+/* Image Slideshow */
+	body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+
+  background-image: url("../../../../Labs/UDW/backgroundbox.gif");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+lowerbox .lowerbox {
+  		background-color: white;
+  		border: 3px solid black;
+  		padding: 25px;
+  		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		margin-top: 20px;
+}
+	lowerbox .logo {
+		font-size: 25px;
+		font-weight: 600;
+		line-height: 30px;
+		padding-left: 30px;
+		max-width: 200px;
+		font-family: "Work Sans", sans-serif;
+	}	
+
+#menu ul {
+		list-style-type: none;
+		text-align: right;
+		font-size: 20px;
+		font-weight: 900;
+	}
+	
+	#menu ul li {
+		color: black;
+		display: inline-table;
+		text-align: center;
+		width: 220px;
+		height: 40px;
+		line-height: 40px;
+		position: relative;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+	#menu ul li a {
+		color: black;
+		text-decoration: none;
+		display: block;
+	}
+	
+	#menu ul li a:hover {
+		color: #333;
+	}
+	
+	#menu ul li > .sub-menu {
+		background: white;
+		display: none;
+		position: absolute;
+		margin-top: 16px;
+		border: 2px solid black;
+	}
+	
+	#menu ul li:hover .sub-menu {
+		display: block;
+	}
+
+.hitArea {
+    position: absolute;
+    width: 100%;
+    height: 230%;
+    top: -60%;
+    background-color: none;
+}
+
+.search-container {
+  float: right;
+}
+
+.input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 20px;
+font-weight: 900;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    float: none;
+  }
+  .input[type=text], .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+	/* Image Slideshow */
+	body, html {
+  height: 100%;
+  margin: 0;
+}
+
+	.bg {
+  /* The image used */
+  background-image: url(""../Labs/UDW/backgroundbox.gif"");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+	
+	/* Hoverunderline */
+	.hover-underline-animation {
+		display: inline-block;
+  		position: relative;
+  		color: black;
+	}
+
+	.hover-underline-animation:after {
+  		content: '';
+  		position: absolute;
+  		width: 100%;
+  		transform: scaleX(0);
+  		height: 3.5px;
+  		bottom: 0;
+  		left: 0;
+  		background-color: black;
+  		transform-origin: bottom right;
+  		transition: transform 0.3s ease-out;
+	}
+
+	.hover-underline-animation:hover:after {
+  		transform: scaleX(1);
+  		transform-origin: bottom left;
+	}
+	
+	
+     img {
+        width: 95%;
+		padding: 20px;
+      }
+	
+	.text {
+		display: block;
+		text-size: 100px;
+	}
+	
+	.h1 {
+		padding: 5px;
+		margin-right: 25px;
+		text-align: left;
+		font-size: 50px;
+		font-weight: 900;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+	.h2 {
+		padding: 5px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-right: 25px;
+		text-align: left;
+		font-size: 40px;
+		font-weight: 900;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+    .h3 {
+		line-height: 1.8;
+		padding: 5px;
+		margin-top: 5px;
+		margin-right: 20px;
+		margin-bottom: 5px;
+		text-align: left;
+		font-size: 25px;
+		font-family: "Work Sans", sans-serif;
+      }
+	
+	.product {
+		display: flex;
+		padding: 20px;
+	}
+	
+	.productpicture {
+		flex-basis: 50%;
+		background-color: white;
+	}
+	
+	.productdescription {
+		flex-basis: 50%;
+		background-color: white;
+	}
+	
+	
+	/* Bottom box */
+	bottombox .bottombox {
+		padding: 1px;
+		background-color: black;
+		
+		/* Full height */
+		height: 30%; 
+		
+		/* Center and scale the image nicely */
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+	
+	#menubottom ul {
+		list-style-type: none;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 900;
+		margin-top: 20px;
+	}
+	
+	#menubottom ul li {
+		color: white;
+		display: inline-table;
+		width: 250px;
+		height: 40px;
+		line-height: 40px;
+		position: relative;
+		font-family: "Work Sans", sans-serif;
+	}
+	
+	#menubottom ul li a {
+		color: white;
+		text-decoration: none;
+		display: block;
+	}
+	
+	#menubottom ul li a:hover {
+		color: white;
+	}
+	
+	#menubottom ul li > .sub-menubottom {
+
+		position: absolute;
+	}
+	
+	#menubottom ul li:hover .sub-menubottom {
+		display: block;
+	}
+	
+.infocontainer {
+	padding: 2%;
+    margin: auto;
+}
+/* Định dạng phần tab */
+div.tab {
+    float: left;
+    border: 2px solid black;
+    background-color: white;
+    width: 30%;
+    height: 350px;
+}
+ 
+/* định dạng các thẻ a dại diện cho từng tab */
+div.tab a {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+ 
+/* Đổi màu khi tab được hover */
+div.tab a:hover {
+    background-color: #ddd;
+}
+ 
+/* Đổi màu khi tab được active */
+div.tab a.active {
+    background-color: #ccc;
+}
+ 
+/* Định dạng cho phần nội dung */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border: 2px solid black;
+	height: 350px;
+}
+	
+	.space {
+		margin-top: 10px;
+	}
+	
+</style>
+	
+<body>
+<backgroundbox>
+			<lowerbox>
+				<div class="lowerbox">
+					<div style="display: inline-block;">
+						<div><a href="index.html" class="logo" style="text-decoration: none; color: black;">BOOKPEDIA</a></div>
+					</div>
+					<div style="display: inline-block; float: right;">
+					<div id="menu">	
+					<ul>
+					<li>
+						<div class="hover-underline-animation"><a href="#">Manga</a></div>
+						<div class="hitArea"></div>
+						<ul class="sub-menu">
+							<div class="hover-underline-animation">
+								<li><a href="../../DiscoverManga.html" target="_blank">Khám phá</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="../../ReleaseCalendar.html" target="_blank">Lịch phát hành</a></li>
+							</div>
+						</ul>
+					</li>
+					<li>
+						<div class="hover-underline-animation">
+						<a href="#">Novels</a>
+						</div>
+						<div class="hitArea"></div>
+						<ul class="sub-menu">
+							<div class="hover-underline-animation">
+								<li><a href="../../DiscoverLN.html" target="_blank">Khám phá</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="../../ReleaseCalendar.html" target="_blank">Lịch phát hành</a></li>
+							</div>
+						</ul>
+					</li>
+					<div class="hover-underline-animation">
+						<li><a href="../../News.html" target="_blank">Tin tức</a></li>
+					</div>
+						<li>
+						<div class="hover-underline-animation">
+						<a href="#">Tìm kiếm</a>
+						</div>
+						<div class="hitArea"></div>
+						<ul class="sub-menu">
+								<li>
+									<div class="search-container">
+										<form action="/action_page.php">
+											<input type="text" placeholder="Search.." name="search">
+											<button type="submit"><i class="fa fa-search"></i></button>
+										</form>
+									</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</lowerbox>
+	</backgroundbox>
+	
+	<div class="product">
+	<div class="productpicture">
+		<img src="../../../Resources/manga/mirai/mirai01.png">
+	</div>
+	
+	<div class="productdescription">
+		<div class="text">
+	<div class="h1">Mirai đến từ tương lai</div><br>
+	<div class="h2">
+		<p>Tác giả: Mamoru Hosoda</p>
+			</div>
+			<div class="h3"><br>
+				<p>Với Mirai đến từ tương lai, tác giả Mamoru Hosoda tiếp tục khai thác đề tài gia đình và tình thân - vốn góp phần xây dựng và định hình nên tên tuổi của ông qua hàng loạt tác phẩm đình đám với vô số giải thưởng và đề cử.</p>
+			</div>
+	</div>
+	</div>
+</div>
+
+	<div class="h3" style="padding: 10%;"><br>
+				<p>Đặt gia đình làm chủ đề trung tâm, Hosoda Mamoru đã thêm các gia vị nhiệm màu để biến hóa ra một giới diệu kỳ trong Mirai đến từ tương lai.</p>
+				<p>Không có những nhân vật gồng mình gánh trên vai vận mệnh của cả thế giới, cũng không có các cuộc chiến đầy hấp dẫn, Mirai đến từ tương lai chỉ xoay quanh bé Kun - cậu bé bốn tuổi quen được nuông chiều bỗng chốc bị cô em gái Mirai mới ra đời cướp mất tình thương của bố mẹ. Nghe qua đúng thật chẳng có gì thú vị, song bằng lối kể chuyện tài tình kết hợp với các yếu tố kì ảo được bổ sung hợp lý và đầy tinh tế, Mamoru Hosoda vẫn viết nên cuộc hành trình khiến độc giả phải liên tục trầm trồ dõi theo, đi hết từ bất ngờ này đến bất ngờ khác.</p><br>
+				<p>Hàng loạt hiện tượng kì lạ xảy ra: chú chó Yukko nay hóa thành người, cô gái tự xưng là Mirai đến từ tương lai bất ngờ xuất hiện, bé Kun bị đẩy về quá khứ gặp ông cố thời trai trẻ và mẹ cậu hồi bé,… từng tình huống oái oăm dở khóc dở cười ấy lại dạy cho bé Kun bài học về tình cảm gia đình, sự trưởng thành và thấu hiểu lẫn nhau - những bài học mà mỗi đứa trẻ cần được học và mọi người lớn cần ngoái đầu nhìn lại.</p><br>
+				<p>Trong cuộc hành trình ấy, có lúc cậu bé hoảng sợ, muốn bỏ cuộc, hay lạc mất chính bản thân - điều mỗi chúng ta phải trải qua trong cuộc sống hằng ngày, song đến cuối, bé Kun hiểu ra gia đình quý giá với cậu nhường nào, cũng như ta nhận ra đâu mới là thứ quan trọng, và thế nào mới là trưởng thành. Chính bởi lý do này mà tác giả Mamoru Hosoda đặt tên cho nhân vật chính là Kun - sử dụng chữ Hán là Huấn, mang nghĩa dạy dỗ, bảo ban - như lời nhắc nhở về bài học ta không được phép quên để có thể kết nối với Mirai, hay tương lai: mối liên kết gia đình là điều quý giá không gì thay thế nổi.</p><br>
+	</div>
+
+	<div class="product">
+	<div class="productpicture">
+		<img src="../../../Resources/manga/mirai/mirai03.png">
+	</div>
+	
+	<div class="productdescription">
+		<div class="text">
+	<div class="h1">Mirai đến từ tương lai thành công với sự song hành của anime và light novel.</div>
+			</div>
+		<div class="h3"><br>
+				<p>Nhiều người sẽ cho rằng sự thành công của bản phim điện ảnh với đề cử Oscar ở hạng mục Phim hoạt hình xuất sắc nhất làm lu mờ đi bản tiểu thuyết, nhưng thực chất, thế giới trong phim được mở rộng hơn rất nhiều qua cuốn sách này.</p>
+			</div>
+	</div>
+	</div>
+	
+	<div class="h3" style="padding: 10%;"><br>
+				<p>Nếu bản điện ảnh mở ra thế giới kì ảo đầy màu sắc cùng từng khung hình được chăm chút tỉ mỉ, công phu thì tiểu thuyết lại xây dựng chi tiết hơn về nội tâm các nhân vật, đặc biệt là bé Kun, giúp độc giả cảm nhận sự gần gũi thân quen và mối dây liên kết với nhân vật. Ở đó, độc giả như hiểu được suy nghĩ của đứa bé bốn tuổi bị cướp mất tình thương, cố gắng giành lấy sự chú ý của bố mẹ, hiểu được nỗi vất vả của các bậc phụ huynh khi nuôi dạy con trẻ, hiểu được rằng gia đình không phải là sự kết nối về mặt di truyền mà là sự kết nối của những trái tim, không phải là cùng nhìn về một hướng mà là dẹp bỏ cái tôi để nhìn vào nhau, nghĩ cho nhau, và cùng khóc, cùng cười.</p><br>
+				<p>Tuy xoay quanh cùng đề tài, mỗi tác phẩm của Mamoru Hosoda lại thể hiện một khía cạnh riêng trong tình cảm gia đình. Nếu ở Cuộc chiến mùa hè, Hosoda tập trung khắc họa mối liên kết giữa các thế hệ trong một gia tộc, ở Cậu bé và quái vật là tình phụ tử giữa những người không cùng chung huyết thống, thậm chí khác biệt cả về giống loài, còn ở Ame và Yuki - Những đứa con của sói là nỗi giằng xé giữa sự gắn kết gia đình và bản ngã thì ở Mirai đến từ tương lai, điều ông tập trung khai thác là sự kết nối và thấu hiểu giữa thành viên trong gia đình. Đặc biệt là, dù không đưa vào những yếu tố đao to búa lớn hay quá đỗi bình dị như các tác phẩm trước đó, Mamoru Hosoda vẫn tạo ra được nét riêng, đem tới thành công cho cả bản tiểu thuyết cũng như điện ảnh của Mirai đến từ tương lai.</p><br>
+				<p>Cuốn sách tuyệt vời không thể bỏ qua này chính là hồi chuông cảnh báo trong thời đại hiện nay, khi giá trị gia đình ngày càng trở nên mờ nhạt trước áp lực của cuộc sống bộn bề lo toan.</p><br>
+	</div>
+	
+	
+		<br>
+	<div class="space">
+		<br>
+	
+	</div>
+	
+			<bottombox>
+			<div class="bottombox">
+				<div id="menubottom">
+					<ul>
+					<li>
+						<div class="hover-underline-animation"><a href="#">Hỗ trợ</a></div>
+						<ul class="sub-menubottom">
+							<div class="hover-underline-animation">
+								<li><a href="#">Câu hỏi thường gặp</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="#">Điều khoản dịch vụ</a></li>
+							</div>	
+						</ul>
+					</li>
+					<li>
+						<div class="hover-underline-animation">
+						<a href="#">Chính sách</a>
+						</div>
+						<ul class="sub-menubottom">
+							<div class="hover-underline-animation">
+								<li><a href="#">Chính sách bảo mật</a></li>
+							</div>
+							<div class="hover-underline-animation">
+								<li><a href="#"></a></li>
+							</div>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</bottombox>
+</body>
+</html>
